@@ -15,3 +15,7 @@ then
 ```
 node app
 ```
+
+open browser and navigate to 
+
+localhost:10010/index.html
