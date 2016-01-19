@@ -1,0 +1,52 @@
+swagger: '2.0'
+info:
+  title: Getty Images API
+  description: Move your app forward with the Getty Images API
+  version: "1.0.0"
+paths:
+  /hello:
+    x-swagger-router-controller: hello_world
+    get:
+      summary: Get hello world 
+      operationId: hello
+      description: |
+        Some description
+      parameters:
+        - name: name
+          in: query
+          description: |
+            The name of the person to whom to say hello
+          required: false
+          type: string
+      tags:
+        - hello_world
+      responses:
+        200:
+          description: A hello world
+        default:
+          description: Unexpected error
+    post:
+      summary: Post Hello world
+      operationId: hello_post
+      produces:
+        - application/json
+      consumes:
+        - application/json
+      tags:
+        - hello_world
+      description: |
+        Some hello post description
+      parameters:
+        - name: hello_world
+          in: body
+          description: hello world object
+          schema:
+            $ref: '#/definitions/hello_world'
+      responses:
+        200:
+          description: A hello world
+        default:
+          description: Unexpected error
+definitions:
+  hello_world:
+    $ref: swagger_source/schemas/hello_world.json

@@ -1,0 +1,15 @@
+{
+  "title": "Hello Model",
+  "required": [
+    "hello",
+    "world"
+  ],
+  "properties": {
+    "hello": {
+      "type": "string"
+    },
+    "world": {
+      "type": "string"
+    }
+  }
+}
